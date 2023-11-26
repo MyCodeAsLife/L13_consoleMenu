@@ -49,7 +49,7 @@ namespace L13_consoleMenu
                         Console.WriteLine($"Вас зовут {userName}.");
                         break;
                     case CommandChangeConsoleColor:
-                        Console.WriteLine("Какой цвет шрифта вы хотите?\nMagenta - Фиолетово-Крассный\tGreen - Зеленый");
+                        Console.WriteLine($"Какой цвет шрифта вы хотите?\n{CommandMagenta} - Фиолетово-Крассный\t{CommandGreen} - Зеленый");
                         Console.Write("Выберите цвет: ");
                         userInput = Console.ReadLine();
 
