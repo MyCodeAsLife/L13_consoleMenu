@@ -45,9 +45,11 @@ namespace L13_consoleMenu
                         Console.Write("Введите ваше имя: ");
                         userName = Console.ReadLine();
                         break;
+
                     case CommandShowName:
                         Console.WriteLine($"Вас зовут {userName}.");
                         break;
+
                     case CommandChangeConsoleColor:
                         Console.WriteLine($"Какой цвет шрифта вы хотите?\n{CommandMagenta} - Фиолетово-Крассный\t{CommandGreen} - Зеленый");
                         Console.Write("Выберите цвет: ");
@@ -58,11 +60,13 @@ namespace L13_consoleMenu
                             case CommandMagenta:
                                 Console.ForegroundColor = ConsoleColor.Magenta;
                                 break;
+
                             case CommandGreen:
                                 Console.ForegroundColor = ConsoleColor.Green;
                                 break;
                         }
                         break;
+
                     case CommandChangeBackgroundColor:
                         Console.WriteLine($"Какой цвет фона вы хотите?\n{CommandRed} - Крассный\t{CommandYellow} - Желтый");
                         Console.Write("Выберите цвет: ");
@@ -73,21 +77,26 @@ namespace L13_consoleMenu
                             case CommandRed:
                                 Console.BackgroundColor = ConsoleColor.Red;
                                 break;
+
                             case CommandYellow:
                                 Console.BackgroundColor = ConsoleColor.Yellow;
                                 break;
                         }
                         break;
+
                     case CommandResetUserColors:
                         Console.BackgroundColor = defaultBackgroundColor;
                         Console.ForegroundColor = defaultForegroudColor;
                         break;
+
                     case CommandShowWeather:
                         Console.WriteLine($"Прогноз погоды: {currentWeather}");
                         break;
+
                     case CommanExit:
                         isOpen = false;
                         continue;
+
                     default:
                         Console.WriteLine("Вы ввели неизвестную команду. Пожалуйста повторите ввод.\n");
                         break;
